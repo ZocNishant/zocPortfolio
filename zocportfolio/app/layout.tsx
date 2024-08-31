@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans, Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import GrainEffect from "@/components/visualEffects/grain-effect";
 
 const mainFont = Open_Sans({ subsets: ["latin"] });
 const robotoSlab = Roboto_Slab({
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(mainFont.className, robotoSlab.variable)}>
+        <GrainEffect />
         {children}
       </body>
     </html>
